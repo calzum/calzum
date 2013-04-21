@@ -1,10 +1,1 @@
-name: start
-version: 1.0
-main: me.weecazza7.start.MainPvP
-commands:
-    Kit:
-        description: Lists kits
-    tank:
-        description: You are a tank!
-    archer:
-        description: Suicide
+f
