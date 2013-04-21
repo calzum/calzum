@@ -11,10 +11,10 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class tank implements CommandExecutor {
-	private tank myExecutor;
+public class TankCommandExecutor implements CommandExecutor {
+	private TankCommandExecutor myExecutor;
 	
-	public tank(start plugin) {
+	public TankCommandExecutor(MainPvP plugin) {
 		
 	}
 	
@@ -79,11 +79,11 @@ public class tank implements CommandExecutor {
 		return itemStack;
 	}
 
-	public tank getMyExecutor() {
+	public TankCommandExecutor getMyExecutor() {
 		return myExecutor;
 	}
 
-	public void setMyExecutor(tank myExecutor) {
+	public void setMyExecutor(TankCommandExecutor myExecutor) {
 		this.myExecutor = myExecutor;
 	}
 

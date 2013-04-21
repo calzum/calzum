@@ -6,7 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-public class motd implements Listener {
+public class OnJoinEventListener implements Listener {
 	
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent e) {
@@ -14,7 +14,7 @@ public class motd implements Listener {
 		p.sendMessage(ChatColor.BLUE + "=====================================================");
 		p.sendMessage("");
 		p.sendMessage("");
-		p.sendMessage(ChatColor.BOLD  + "         Welcome " + p.getDisplayName() + " to Calzums Server");
+		p.sendMessage(ChatColor.BOLD  + "         Welcome " + p.getDisplayName() + " to Calzums KitPvP Server");
 		p.sendMessage("");
 		p.sendMessage("");
 		p.sendMessage(ChatColor.BLUE + "=====================================================");

@@ -8,7 +8,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.block.SignChangeEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-public class signlis implements Listener {
+public class SignEventListener implements Listener {
 	
 	@EventHandler
 	public void onSignChange(SignChangeEvent e) {
