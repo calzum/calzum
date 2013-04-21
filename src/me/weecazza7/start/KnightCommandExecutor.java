@@ -12,10 +12,10 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 
-public class TankCommandExecutor implements CommandExecutor {
+public class KnightCommandExecutor implements CommandExecutor {
  private TankCommandExecutor myExecutor;
- 
- public TankCommandExecutor(MainPvP plugin) {
+
+ public KnightCommandExecutor(MainPvP plugin) {
   
  }
  
@@ -23,7 +23,7 @@ public class TankCommandExecutor implements CommandExecutor {
  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
   Player p = (Player) sender;
   Inventory pi = p.getInventory();
-  p.sendMessage(ChatColor.GREEN + "You are now a TANK");
+  p.sendMessage(ChatColor.GREEN + "You are now a Knight");
   p.getInventory().clear();
   p.getInventory().setArmorContents(null);
     for(PotionEffect effect : p.getActivePotionEffects())
@@ -49,38 +49,39 @@ public class TankCommandExecutor implements CommandExecutor {
   return itemStack;
  }
  public static ItemStack getsword(){
-  ItemStack itemStack = new ItemStack(Material.IRON_SWORD);
+  ItemStack itemStack = new ItemStack(Material.DIAMOND_SWORD);
   ItemMeta itemMeta = itemStack.getItemMeta();
   itemMeta.addEnchant(Enchantment.DAMAGE_ALL, 1, true);
-  itemMeta.setDisplayName("§bThe Knight's Sharp Sword!");
+  itemMeta.addEnchant(Enchantment.KNOCKBACK, 1, true);
+  itemMeta.setDisplayName("§bThe Masters Sharp Sword!");
   itemStack.setItemMeta(itemMeta);
   return itemStack;
  }
  public static ItemStack gethelm(){
-  ItemStack itemStack = new ItemStack(Material.DIAMOND_HELMET);
+  ItemStack itemStack = new ItemStack(Material.IRON_HELMET);
   ItemMeta itemMeta = itemStack.getItemMeta();
-  itemMeta.setDisplayName("§bThe Knight's Helm");
+  itemMeta.setDisplayName("§bThe Masters Helm");
   itemStack.setItemMeta(itemMeta);
   return itemStack;
  }
  public static ItemStack getchest(){
-  ItemStack itemStack = new ItemStack(Material.DIAMOND_CHESTPLATE);
+  ItemStack itemStack = new ItemStack(Material.IRON_CHESTPLATE);
   ItemMeta itemMeta = itemStack.getItemMeta();
-  itemMeta.setDisplayName("§bThe Knight's Chestplate");
+  itemMeta.setDisplayName("§bThe Masters Chestplate");
   itemStack.setItemMeta(itemMeta);
   return itemStack;
  }
  public static ItemStack getlegs(){
-  ItemStack itemStack = new ItemStack(Material.DIAMOND_LEGGINGS);
+  ItemStack itemStack = new ItemStack(Material.IRON_LEGGINGS);
   ItemMeta itemMeta = itemStack.getItemMeta();
-  itemMeta.setDisplayName("§bThe Knight's Pants");
+  itemMeta.setDisplayName("§bThe Masters Pants");
   itemStack.setItemMeta(itemMeta);
   return itemStack;
  }
  public static ItemStack getboot(){
-  ItemStack itemStack = new ItemStack(Material.DIAMOND_BOOTS);
+  ItemStack itemStack = new ItemStack(Material.IRON_BOOTS);
   ItemMeta itemMeta = itemStack.getItemMeta();
-  itemMeta.setDisplayName("§bThe Knight's Boots");
+  itemMeta.setDisplayName("§bThe Masters Boots");
   itemStack.setItemMeta(itemMeta);
   return itemStack;
  }
