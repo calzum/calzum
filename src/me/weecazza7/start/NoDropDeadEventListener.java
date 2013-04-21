@@ -11,8 +11,6 @@ public class NoDropDeadEventListener implements Listener{
 	public void PlayerDeathEvent(PlayerDeathEvent event){
 		Player p = event.getEntity();
 		Player k = event.getEntity().getKiller();
-		event.getKeepLevel();
 		event.getDrops().clear();
-		k.giveExpLevels(1);
 }
 }
