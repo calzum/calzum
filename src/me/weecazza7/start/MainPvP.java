@@ -8,15 +8,15 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class start extends JavaPlugin {
+public class MainPvP extends JavaPlugin {
 	
 	public void onEnable() {
 		Bukkit.getServer().getLogger().info("Enabled");
 		PluginManager manager = this.getServer().getPluginManager();
-		manager.registerEvents(new motd(), this);
-		manager.registerEvents(new signlis(), this);
-		getCommand("kit").setExecutor(new kits(this));
-		getCommand("tank").setExecutor(new tank(this));
+		manager.registerEvents(new OnJoinEventListener(), this);
+		manager.registerEvents(new SignEventListener(), this);
+		getCommand("kit").setExecutor(new KitCommandExecutor(this));
+		getCommand("tank").setExecutor(new TankCommandExecutor(this));
 		
 	}
 	public void onDisable() {

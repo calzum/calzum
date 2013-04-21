@@ -7,10 +7,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 
-public class kits implements CommandExecutor{
-private kits myExecutor;
+public class KitCommandExecutor implements CommandExecutor{
+private KitCommandExecutor myExecutor;
 	
-	public kits(start plugin) {
+	public KitCommandExecutor(MainPvP plugin) {
 
 	}
 	
@@ -24,11 +24,11 @@ private kits myExecutor;
 		
 		}
 
-		public kits getMyExecutor() {
+		public KitCommandExecutor getMyExecutor() {
 			return myExecutor;
 		}
 
-		public void setMyExecutor(kits myExecutor) {
+		public void setMyExecutor(KitCommandExecutor myExecutor) {
 			this.myExecutor = myExecutor;
 		}
 }

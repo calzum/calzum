@@ -8,7 +8,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.block.SignChangeEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-public class signlis implements Listener {
+public class SignEventListener implements Listener {
 	
 	@EventHandler
 	public void onSignChange(SignChangeEvent e) {
@@ -26,7 +26,7 @@ public class signlis implements Listener {
 			Sign s = (Sign) e.getClickedBlock().getState();
 			if (s.getLine(0).equalsIgnoreCase("[HEAL]")) {
 				e.getPlayer().setHealth(20);
-				e.getPlayer().sendMessage(ChatColor.GREEN + "You were healed!");
+				e.getPlayer().sendMessage(ChatColor.GREEN + "You were healed");
 			}
 		}
 	}
