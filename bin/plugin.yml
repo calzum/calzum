@@ -1,16 +1,10 @@
 name: start
 version: 1.0
-main: me.weecazza7.start.start
+main: me.weecazza7.start.MainPvP
 commands:
-    start:
-        description: A test command!
-    feed:
-        description: Feeds you!
-    kill:
-        description: Suicide
-    heal:
-        description: Heals you!
+    Kit:
+        description: Lists kits
     tank:
-        description: BOOM!
-    kit:
-        description: Kits!
+        description: You are a tank!
+    archer:
+        description: Suicide
