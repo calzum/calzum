@@ -29,7 +29,6 @@ private ArcherCommandExecutor myExecutor;
               {
                   p.removePotionEffect(effect.getType());
               }
-		    //p.getInventory().set
 		    p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2400000, 0));
 		    p.getInventory().setHelmet(getHelmet());
 		    p.getInventory().setChestplate(getchestplate());
