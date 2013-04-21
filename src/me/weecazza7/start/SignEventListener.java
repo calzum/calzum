@@ -26,7 +26,7 @@ public class SignEventListener implements Listener {
 			Sign s = (Sign) e.getClickedBlock().getState();
 			if (s.getLine(0).equalsIgnoreCase("[HEAL]")) {
 				e.getPlayer().setHealth(20);
-				e.getPlayer().sendMessage(ChatColor.GREEN + "You were healed!");
+				e.getPlayer().sendMessage(ChatColor.GREEN + "You were healed");
 			}
 		}
 	}
