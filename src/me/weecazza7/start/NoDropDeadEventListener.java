@@ -17,5 +17,11 @@ public class NoDropDeadEventListener implements Listener{
         p.playSound(p.getLocation(), Sound.AMBIENCE_THUNDER , 1007, 0);
         p.playEffect(p.getLocation(), Effect.SMOKE , 10);
 		event.getDrops().clear();
+		event.setKeepLevel(true);
+		if(k instanceof Player){
+		k.giveExpLevels(10);
+		}
+		event.setDroppedExp(0);
+		
 }
 }
