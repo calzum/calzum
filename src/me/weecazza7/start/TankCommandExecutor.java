@@ -45,46 +45,39 @@ public class TankCommandExecutor implements CommandExecutor {
   return false;
   
  }
- public static ItemStack getfood(){
-  ItemStack itemStack = new ItemStack(Material.COOKED_BEEF, 5);
-  ItemMeta itemMeta = itemStack.getItemMeta();
-  itemMeta.setDisplayName("§bThe only way!");
-  itemStack.setItemMeta(itemMeta);
-  return itemStack;
- }
  public static ItemStack getsword(){
-  ItemStack itemStack = new ItemStack(Material.IRON_SWORD);
+  ItemStack itemStack = new ItemStack(Material.STONE_SWORD);
   ItemMeta itemMeta = itemStack.getItemMeta();
-  itemMeta.addEnchant(Enchantment.DAMAGE_ALL, 1, true);
-  itemMeta.setDisplayName("§bThe Knight's Sharp Sword!");
+  itemMeta.addEnchant(Enchantment.DAMAGE_ALL, 3, true);
+  itemMeta.setDisplayName("§bThe Tank's broken Sword!");
   itemStack.setItemMeta(itemMeta);
   return itemStack;
  }
  public static ItemStack gethelm(){
   ItemStack itemStack = new ItemStack(Material.DIAMOND_HELMET);
   ItemMeta itemMeta = itemStack.getItemMeta();
-  itemMeta.setDisplayName("§bThe Knight's Helm");
+  itemMeta.setDisplayName("§bThe Tank's Helm");
   itemStack.setItemMeta(itemMeta);
   return itemStack;
  }
  public static ItemStack getchest(){
   ItemStack itemStack = new ItemStack(Material.DIAMOND_CHESTPLATE);
   ItemMeta itemMeta = itemStack.getItemMeta();
-  itemMeta.setDisplayName("§bThe Knight's Chestplate");
+  itemMeta.setDisplayName("§bThe Tank's Chestplate");
   itemStack.setItemMeta(itemMeta);
   return itemStack;
  }
  public static ItemStack getlegs(){
   ItemStack itemStack = new ItemStack(Material.DIAMOND_LEGGINGS);
   ItemMeta itemMeta = itemStack.getItemMeta();
-  itemMeta.setDisplayName("§bThe Knight's Pants");
+  itemMeta.setDisplayName("§bThe Tank's Pants");
   itemStack.setItemMeta(itemMeta);
   return itemStack;
  }
  public static ItemStack getboot(){
   ItemStack itemStack = new ItemStack(Material.DIAMOND_BOOTS);
   ItemMeta itemMeta = itemStack.getItemMeta();
-  itemMeta.setDisplayName("§bThe Knight's Boots");
+  itemMeta.setDisplayName("§bThe Tank's Boots");
   itemStack.setItemMeta(itemMeta);
   return itemStack;
  }

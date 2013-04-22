@@ -23,6 +23,7 @@ public class MainPvP extends JavaPlugin {
   getCommand("tank").setExecutor(new TankCommandExecutor(this));
   getCommand("archer").setExecutor(new ArcherCommandExecutor(this));
   getCommand("knight").setExecutor(new KnightCommandExecutor(this));
+  getCommand("soup").setExecutor(new SoupCommandExecutor(this));
   
  }
  public void onDisable() {

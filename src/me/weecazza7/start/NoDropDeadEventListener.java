@@ -19,7 +19,7 @@ public class NoDropDeadEventListener implements Listener{
 		event.getDrops().clear();
 		event.setKeepLevel(true);
 		if(k instanceof Player){
-		k.giveExpLevels(10);
+		k.giveExpLevels(2);
 		}
 		event.setDroppedExp(0);
 		

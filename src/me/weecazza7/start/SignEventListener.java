@@ -21,6 +21,21 @@ public class SignEventListener implements Listener {
 			e.setLine(1, "§3Buy Sharp 2");
 			e.setLine(2, "§3 10xp");
 		}
+		if (e.getLine(0).equalsIgnoreCase("[Buys3]")) {
+			e.setLine(0,  "§4[Buy]");
+			e.setLine(1, "§3Buy Sharp 3");
+			e.setLine(2, "§3 30xp");
+		}
+		if (e.getLine(0).equalsIgnoreCase("[Buys4]")) {
+			e.setLine(0,  "§4[Buy]");
+			e.setLine(1, "§3Buy Sharp 4");
+			e.setLine(2, "§3 60xp");
+		}
+		if (e.getLine(0).equalsIgnoreCase("[Buys5]")) {
+			e.setLine(0,  "§4[Buy]");
+			e.setLine(1, "§3Buy Sharp 5");
+			e.setLine(2, "§3 100xp");
+		}
 			
 		}
 			
@@ -33,12 +48,57 @@ public class SignEventListener implements Listener {
 		if(!(e.getAction() == Action.RIGHT_CLICK_BLOCK)) return;
 		if (e.getClickedBlock().getState() instanceof Sign) {
 			Sign s = (Sign) e.getClickedBlock().getState();
-			if (s.getLine(0).equalsIgnoreCase("§4[Buy]")) {
+			if (s.getLine(1).equalsIgnoreCase("§3Buy Sharp 2")) {
 				if(p.getInventory().getItemInHand().getType() == Material.DIAMOND_SWORD){
-				if(getxp>=50){
+				if(getxp>=10){
 				p.sendMessage(ChatColor.BLUE + "[Shop]" + ChatColor.GREEN + "You Bought a upgrade!");
-				p.setLevel(getxp-50);
+				p.setLevel(getxp-10);
 				p.getInventory().getItemInHand().addEnchantment(Enchantment.DAMAGE_ALL, 2);
+				return;
+			}}{{
+				e.getPlayer().sendMessage(ChatColor.BLUE + "[Shop]"+ ChatColor.RED + "You do not have enough xp or the item cannot be enchanted!");
+			}}
+			}
+		}
+		if(!(e.getAction() == Action.RIGHT_CLICK_BLOCK)) return;
+		if (e.getClickedBlock().getState() instanceof Sign) {
+			Sign s = (Sign) e.getClickedBlock().getState();
+			if (s.getLine(1).equalsIgnoreCase("§3Buy Sharp 3")) {
+				if(p.getInventory().getItemInHand().getType() == Material.DIAMOND_SWORD){
+				if(getxp>=30){
+				p.sendMessage(ChatColor.BLUE + "[Shop]" + ChatColor.GREEN + "You Bought a upgrade!");
+				p.setLevel(getxp-30);
+				p.getInventory().getItemInHand().addEnchantment(Enchantment.DAMAGE_ALL, 3);
+				return;
+			}}{{
+				e.getPlayer().sendMessage(ChatColor.BLUE + "[Shop]"+ ChatColor.RED + "You do not have enough xp or the item cannot be enchanted!");
+			}}
+			}
+		}
+		if(!(e.getAction() == Action.RIGHT_CLICK_BLOCK)) return;
+		if (e.getClickedBlock().getState() instanceof Sign) {
+			Sign s = (Sign) e.getClickedBlock().getState();
+			if (s.getLine(1).equalsIgnoreCase("§3Buy Sharp 4")) {
+				if(p.getInventory().getItemInHand().getType() == Material.DIAMOND_SWORD){
+				if(getxp>=60){
+				p.sendMessage(ChatColor.BLUE + "[Shop]" + ChatColor.GREEN + "You Bought a upgrade!");
+				p.setLevel(getxp-60);
+				p.getInventory().getItemInHand().addEnchantment(Enchantment.DAMAGE_ALL, 4);
+				return;
+			}}{{
+				e.getPlayer().sendMessage(ChatColor.BLUE + "[Shop]"+ ChatColor.RED + "You do not have enough xp or the item cannot be enchanted!");
+			}}
+			}
+		}
+		if(!(e.getAction() == Action.RIGHT_CLICK_BLOCK)) return;
+		if (e.getClickedBlock().getState() instanceof Sign) {
+			Sign s = (Sign) e.getClickedBlock().getState();
+			if (s.getLine(1).equalsIgnoreCase("§3Buy Sharp 5")) {
+				if(p.getInventory().getItemInHand().getType() == Material.DIAMOND_SWORD){
+				if(getxp>=100){
+				p.sendMessage(ChatColor.BLUE + "[Shop]" + ChatColor.GREEN + "You Bought a upgrade!");
+				p.setLevel(getxp-100);
+				p.getInventory().getItemInHand().addEnchantment(Enchantment.DAMAGE_ALL, 5);
 				return;
 			}}{{
 				e.getPlayer().sendMessage(ChatColor.BLUE + "[Shop]"+ ChatColor.RED + "You do not have enough xp or the item cannot be enchanted!");

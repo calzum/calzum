@@ -7,6 +7,8 @@ commands:
     tank:
         description: You are a tank!
     archer:
-        description: Suicide
+        description: Bow em up
     knight:
-        description: Hello
+        description: Guard them!
+    soup:
+        description: Refill
