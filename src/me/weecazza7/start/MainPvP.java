@@ -9,6 +9,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MainPvP extends JavaPlugin {
+	
  
  public void onEnable() {
   Bukkit.getServer().getLogger().info("Enabled");
