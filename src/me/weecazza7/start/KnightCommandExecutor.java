@@ -33,6 +33,7 @@ public class KnightCommandExecutor implements CommandExecutor {
 			        {
 			            p.removePotionEffect(effect.getType());
 			        }
+			    
 			     pi.addItem(getfood());
 			     pi.addItem(getsword());
 			     p.getInventory().setHelmet(gethelm());
