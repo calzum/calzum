@@ -27,7 +27,7 @@ public class SignEventListener implements Listener {
 	
 	
 	@EventHandler
-	public void onPlayerInteract(PlayerInteractEvent e) {
+	public void onPlayerInteract(PlayerInteractEvent e) {//
 		Player p = e.getPlayer();
 		int getxp = p.getLevel();
 		if(!(e.getAction() == Action.RIGHT_CLICK_BLOCK)) return;
