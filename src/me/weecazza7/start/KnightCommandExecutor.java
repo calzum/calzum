@@ -34,20 +34,23 @@ public class KnightCommandExecutor implements CommandExecutor {
 			            p.removePotionEffect(effect.getType());
 			        }
 			    
-			     pi.addItem(getfood());
 			     pi.addItem(getsword());
 			     p.getInventory().setHelmet(gethelm());
 			     p.getInventory().setChestplate(getchest());
 			     p.getInventory().setLeggings(getlegs());
 			     p.getInventory().setBoots(getboot());
-		p.sendMessage(ChatColor.GREEN + "[Shop]You Bought an upgrade!");
+			      ItemStack getSoup = new ItemStack(Material.MUSHROOM_SOUP, 1);
+			      for(int i=1; i <=34; i++)
+			      {
+			      pi.addItem(getSoup);
+			      }
+		  p.sendMessage(ChatColor.BLUE + "[Shop]"+ ChatColor.GREEN + "You bought a kit");
 		p.setLevel(getxp-50);
 
 		return true;
-	}
-		else;
+	}else
 	{
-		p.sendMessage(ChatColor.RED + "[Shop]You do not have enough xp!");
+		  p.sendMessage(ChatColor.BLUE + "[Shop]"+ ChatColor.RED + "You do not have enough xp");
 	}
      
   

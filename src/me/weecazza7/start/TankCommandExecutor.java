@@ -30,12 +30,16 @@ public class TankCommandExecutor implements CommandExecutor {
         {
             p.removePotionEffect(effect.getType());
         }
-     pi.addItem(getfood());
      pi.addItem(getsword());
      p.getInventory().setHelmet(gethelm());
      p.getInventory().setChestplate(getchest());
      p.getInventory().setLeggings(getlegs());
      p.getInventory().setBoots(getboot());
+     ItemStack getSoup = new ItemStack(Material.MUSHROOM_SOUP, 1);
+     for(int i=1; i <=34; i++)
+     {
+     pi.addItem(getSoup);
+     }
      
   
   return false;
