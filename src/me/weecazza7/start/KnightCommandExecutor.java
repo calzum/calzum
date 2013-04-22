@@ -23,19 +23,31 @@ public class KnightCommandExecutor implements CommandExecutor {
  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
   Player p = (Player) sender;
   Inventory pi = p.getInventory();
-  p.sendMessage(ChatColor.GREEN + "You are now a Knight");
-  p.getInventory().clear();
-  p.getInventory().setArmorContents(null);
-    for(PotionEffect effect : p.getActivePotionEffects())
-        {
-            p.removePotionEffect(effect.getType());
-        }
-     pi.addItem(getfood());
-     pi.addItem(getsword());
-     p.getInventory().setHelmet(gethelm());
-     p.getInventory().setChestplate(getchest());
-     p.getInventory().setLeggings(getlegs());
-     p.getInventory().setBoots(getboot());
+  int getxp = p.getLevel();
+		if(getxp>=50){
+			  p.sendMessage(ChatColor.GREEN + "You are now a Knight");
+			  p.getInventory().clear();
+			  p.getInventory().setArmorContents(null);
+			    for(PotionEffect effect : p.getActivePotionEffects())
+			    	
+			        {
+			            p.removePotionEffect(effect.getType());
+			        }
+			     pi.addItem(getfood());
+			     pi.addItem(getsword());
+			     p.getInventory().setHelmet(gethelm());
+			     p.getInventory().setChestplate(getchest());
+			     p.getInventory().setLeggings(getlegs());
+			     p.getInventory().setBoots(getboot());
+		p.sendMessage(ChatColor.GREEN + "[Shop]You Bought an upgrade!");
+		p.setLevel(getxp-50);
+
+		return true;
+	}
+		else;
+	{
+		p.sendMessage(ChatColor.RED + "[Shop]You do not have enough xp!");
+	}
      
   
   return false;
