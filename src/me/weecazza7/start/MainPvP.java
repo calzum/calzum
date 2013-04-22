@@ -19,6 +19,7 @@ public class MainPvP extends JavaPlugin {
   manager.registerEvents(new NoDropDeadEventListener(), this);
   manager.registerEvents(new NoDropEventListener(), this);
   manager.registerEvents(new SoupEventListener(), this);
+  manager.registerEvents(new SoundOnDeathListener(), this);
   getCommand("kits").setExecutor(new KitCommandExecutor(this));
   getCommand("tank").setExecutor(new TankCommandExecutor(this));
   getCommand("archer").setExecutor(new ArcherCommandExecutor(this));
